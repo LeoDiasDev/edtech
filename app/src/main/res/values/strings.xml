@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">EdTech</string>
-    <string name="api_key">be1337d353cc4f164a071672021ad102</string>
     <string name="title_name">Filme: </string>
     <string name="hint_filme">Nome do Filme</string>
+    <string name="URL_BASE_IMG">https://image.tmdb.org/t/p/w500</string>
+    <string name="hint_data">XX/XX/XXXX</string>
 </resources>

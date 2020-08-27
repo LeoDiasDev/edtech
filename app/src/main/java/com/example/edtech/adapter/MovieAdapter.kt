@@ -5,13 +5,15 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.edtech.DetailActivity
-import com.example.edtech.MainActivity
 import com.example.edtech.R
+import com.example.edtech.Utils
 import com.example.edtech.model.Movie
+import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.item_custom_movie.view.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class MovieAdapter(
     private val movies: List<Movie>,
@@ -32,11 +34,17 @@ class MovieAdapter(
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindView(movie: Movie) {
+
             itemView.name.text = movie.title
+
+            Picasso.get().load(movie.getFullUrl(context)).into(itemView.cover_movie)
+
+            itemView.release.text = Utils.getData(movie.release_date)
 
             itemView.setOnClickListener{
                 val intent = Intent(context, DetailActivity::class.java)
                 intent.putExtra("movie", movie)
+                intent.flags = Intent.FLAG_ACTIVITY_NO_ANIMATION
                 context.startActivity(intent)
             }
         }

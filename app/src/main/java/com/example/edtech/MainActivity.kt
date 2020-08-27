@@ -24,10 +24,10 @@ class MainActivity : AppCompatActivity() {
 
     fun getData() {
         val retrofitClient = NetworkUtils
-            .getRetrofitInstance("https://api.themoviedb.org/")
+            .getRetrofitInstance(this@MainActivity)
 
         val endpoint = retrofitClient.create(ApiService::class.java)
-        val callback = endpoint.getMovies(getString(R.string.api_key))
+        val callback = endpoint.getMovies()
 
         callback.enqueue(object : Callback<Movies> {
             override fun onFailure(call: Call<Movies>, t: Throwable) {
