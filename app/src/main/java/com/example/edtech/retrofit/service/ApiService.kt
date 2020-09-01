@@ -1,8 +1,7 @@
-package com.example.edtech.rest
+package com.example.edtech.retrofit.service
 
-import com.example.edtech.model.Genre
-import com.example.edtech.model.Genres
-import com.example.edtech.model.Movies
+import com.example.edtech.common.model.Genres
+import com.example.edtech.common.model.Movies
 import retrofit2.Call
 import retrofit2.http.GET
 

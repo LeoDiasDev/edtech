@@ -1,4 +1,4 @@
-package com.example.edtech.model
+package com.example.edtech.common.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize

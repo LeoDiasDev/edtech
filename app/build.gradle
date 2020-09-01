@@ -53,6 +53,9 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     kapt "androidx.room:room-compiler:$room_version"
 
+    //  DB SQLite Viewer
+    implementation 'com.facebook.stetho:stetho:1.5.1'
+
     //  Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
 
